@@ -34,7 +34,7 @@ Finance Tracker is a console-based application designed to help users manage the
 
 1. **Clone the repository**:
     ```bash
-    git clone [https://github.com/martazahmad/Finance-Tracker.git](https://github.com/martazahmad/Finance-Tracker.git)
+    git clone https://github.com/martazahmad/Finance-Tracker.git
     cd financetracker
     ```
 
