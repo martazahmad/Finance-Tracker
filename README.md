@@ -78,15 +78,14 @@ Finance Tracker is a console-based application designed to help users manage the
 ## File Structure
 
 The project consists of the following files:
-finance-tracker/
-│
-FinanceTracker.exe     # Executable file
-FinanceTracker.pdb     # Data file necessary to work with transactions.txt
-FinanceTracker.h       # Header file containing the class definitions
-main.cpp               # Main program file
-transactions.txt       # File to store transactions
-README.md              # Project documentation
+Finance-Tracker/
 
+FinanceTracker.exe
+FinanceTracker.pdb
+FinanceTracker.h
+FinanceTracker.cpp
+Transactions.txt
+README.md
 
 ## Classes
 
