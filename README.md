@@ -2,6 +2,25 @@
 
 Finance Tracker is a console-based application designed to help users manage their financial transactions. It allows users to add, display, and analyze transactions based on various criteria, such as category and persons involved. The application also provides functionality to export reports to text files.
 
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Adding a Transaction](#adding-a-transaction)
+  - [Displaying Transactions](#displaying-transactions)
+  - [Analyzing Spending](#analyzing-spending)
+  - [Analyzing Spending by Category](#analyzing-spending-by-category)
+  - [Analyzing Spending by Person](#analyzing-spending-by-person)
+  - [Exporting Reports](#exporting-reports)
+- [File Structure](#file-structure)
+- [Classes](#classes)
+  - [Transaction](#transaction)
+  - [FinanceTracker](#financetracker)
+- [License](#license)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
 ## Features
 
 - **Add Transactions**: Add income or expense transactions with details such as type, category, amount, description, and persons involved.
@@ -15,7 +34,7 @@ Finance Tracker is a console-based application designed to help users manage the
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/financetracker.git
+    git clone [https://github.com/martazahmad/Finance-Tracker.git](https://github.com/martazahmad/Finance-Tracker.git)
     cd financetracker
     ```
 
