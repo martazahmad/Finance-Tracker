@@ -1,97 +1,60 @@
 # Finance Tracker
 
-Welcome to the Finance Tracker application! This application helps you track your financial transactions, analyze your spending habits, and generate reports based on your transactions.
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Class Descriptions](#class-descriptions)
-  - [Transaction](#transaction)
-  - [FinanceTracker](#financetracker)
-- [Functions](#functions)
-  - [FinanceTracker Class Functions](#financetracker-class-functions)
-- [File Structure](#file-structure)
-- [Contributing](#contributing)
-- [License](#license)
+Finance Tracker is a console-based application designed to help users manage their financial transactions. It allows users to add, display, and analyze transactions based on various criteria, such as category and persons involved. The application also provides functionality to export reports to text files.
 
 ## Features
 
-- Add transactions (income or expense)
-- Display all transactions
-- Analyze spending overall
-- Analyze spending by category
-- Analyze spending by person
-- Export reports in text format
+- **Add Transactions**: Add income or expense transactions with details such as type, category, amount, description, and persons involved.
+- **Display Transactions**: View all recorded transactions.
+- **Analyze Spending**: Analyze total income and expenses.
+- **Analyze Spending by Category**: Analyze expenses based on categories.
+- **Analyze Spending by Person**: Analyze expenses based on persons involved in the transactions.
+- **Export Reports**: Export various reports to text files.
 
 ## Installation
 
-To run this project, you need to have a C++ compiler installed on your system. Follow these steps to get started:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/financetracker.git
+    cd financetracker
+    ```
 
-1. Clone the repository:
+2. **Compile the code**:
+    Ensure you have a C++ compiler installed. Compile the code using the following command:
+    ```bash
+    g++ FinanceTracker.cpp -o FinanceTracker
+    ```
 
-git clone https://github.com/your-username/finance-tracker.git
-
-2. Navigate to the project directory:
-   
-cd finance-tracker
-
-3. Compile the project:
-
-g++ -o finance_tracker main.cpp FinanceTracker.h
-
-4. Run the executable:
-
-./finance_tracker
+3. **Run the application**:
+    ```bash
+    ./FinanceTracker
+    ```
 
 ## Usage
 
-Upon running the application, you will be presented with a menu to choose from various operations. Here's a brief overview:
+1. **Adding a Transaction**:
+    - Select "Add Transaction" from the menu.
+    - Enter the required details such as type (income/expense), category, amount, description, and number of persons involved.
+    - If multiple persons are involved, you will be prompted to enter their names and the amount each person is responsible for.
 
-1. Add Transaction: Add a new transaction specifying type (income/expense), category, amount, description, and persons involved.
-2. Display all Transactions: View all transactions entered so far.
-3. Analyze Spending: View total income and expenses.
-4. Analyze Spending by Category: View total expenses categorized by the category.
-5. Analyze Spending by Person: View total expenses categorized by person.
-6. Export Spending Report: Export a report of total income and expenses to a text file.
-7. Export Category Spending Report: Export a report of expenses categorized by category to a text file.
-8. Export Person Spending Report: Export a report of expenses categorized by person to a text file.
-9. Export All Transactions Report: Export all transactions to a text file.
+2. **Displaying Transactions**:
+    - Select "Display all Transactions" from the menu to view all recorded transactions.
+    - Optionally, export the transactions to a text file.
 
-## Class Descriptions
+3. **Analyzing Spending**:
+    - Select "Analyse Spending" to view the total income and expenses.
+    - Optionally, export the report to a text file.
 
-**Transaction**
-This class represents a financial transaction. It has the following attributes:
+4. **Analyzing Spending by Category**:
+    - Select "Analyze Spending by Category" to view expenses based on categories.
+    - Optionally, export the report to a text file.
 
-**type:** The type of transaction (income or expense)
-**category:** The category of the transaction (only for expenses)
-**amount:** The amount of the transaction
-**description:** A brief description of the transaction
-**persons:** The number of persons involved in the transaction
-**personNames:** A vector of names of the persons involved
-**personAmounts:** A map of amounts attributed to each person involved
+5. **Analyzing Spending by Person**:
+    - Select "Analyze Spending by Person" to view expenses based on persons involved.
+    - Optionally, export the report to a text file.
 
-**FinanceTracker**
-This class manages all the transactions and provides functionality to add transactions, analyze spending, and export reports. It has the following attributes and methods:
-
-**Attributes:**
-
-**transactions:** A vector of Transaction objects
-
-**Methods:**
-
-**addTransaction:** Adds a new transaction
-**displayTransactions:** Displays all transactions
-**analyzeSpending:** Analyzes and displays total income and expenses
-**analyzeSpendingCategory:** Analyzes and displays expenses by category
-**analyzeSpendingPerson:** Analyzes and displays expenses by person
-**exportSpendingReport:** Exports total income and expenses to a file
-**exportSpendingCategoryReport:** Exports expenses by category to a file
-**exportSpendingPersonReport:** Exports expenses by person to a file
-**exportAllTransactionsReport:** Exports all transactions to a file
-**saveToFile:** Saves all transactions to a file
-**loadFromFile:** Loads transactions from a file
+6. **Exporting Reports**:
+    - You can export various reports (spending, category spending, person spending, and all transactions) to text files by selecting the appropriate option from the menu.
 
 ## File Structure
 
@@ -102,3 +65,51 @@ finance-tracker/
 ├── main.cpp               # Main program file
 ├── transactions.txt       # File to store transactions
 ├── README.md              # Project documentation
+
+
+## Classes
+
+### Transaction
+
+Represents a financial transaction.
+
+- **Attributes**:
+  - `type`: The type of transaction (income/expense).
+  - `category`: The category of the transaction.
+  - `amount`: The amount of the transaction.
+  - `description`: A description of the transaction.
+  - `persons`: Number of persons involved in the transaction.
+  - `personNames`: Names of the persons involved.
+  - `personAmounts`: Amount each person is responsible for.
+
+- **Methods**:
+  - `toString()`: Converts the transaction to a string format for saving to a file.
+  - `fromString()`: Converts a string to a `Transaction` object for loading from a file.
+
+### FinanceTracker
+
+Manages multiple transactions.
+
+- **Attributes**:
+  - `transactions`: A vector of `Transaction` objects.
+
+- **Methods**:
+  - `addTransaction()`: Adds a new transaction.
+  - `displayTransactions()`: Displays all transactions.
+  - `analyzeSpending()`: Analyzes total income and expenses.
+  - `analyzeSpendingCategory()`: Analyzes expenses based on categories.
+  - `analyzeSpendingPerson()`: Analyzes expenses based on persons involved.
+  - `exportSpendingReport()`: Exports the spending report to a text file.
+  - `exportSpendingCategoryReport()`: Exports the category spending report to a text file.
+  - `exportSpendingPersonReport()`: Exports the person spending report to a text file.
+  - `exportAllTransactionsReport()`: Exports all transactions to a text file.
+  - `saveToFile()`: Saves transactions to a file.
+  - `loadFromFile()`: Loads transactions from a file.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+## Contact
+
+For any inquiries or issues, please contact [martaz.1.official@gmail.com](mailto:martaz.1.official@gmail.com).
