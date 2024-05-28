@@ -81,7 +81,7 @@ The project consists of the following files:
 finance-tracker/
 │
 FinanceTracker.exe     # Executable file
-FinanceTracker.pdb     # data file to store transactions.txt
+FinanceTracker.pdb     # Data file necessary to work with transactions.txt
 FinanceTracker.h       # Header file containing the class definitions
 main.cpp               # Main program file
 transactions.txt       # File to store transactions
